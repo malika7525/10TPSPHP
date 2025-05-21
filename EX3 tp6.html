@@ -1,0 +1,39 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz interactif</title>
+</head>
+<body>
+
+    <h1>Quiz interactive</h1>
+    <button onclick="lancerQuiz()">Démarrer le Quiz</button>
+
+    <script>
+        function lancerQuiz() {
+            const Questions = [
+                ["Quelle est la capitale de la France ?", "Paris"],
+                ["Quelle est la capitale de l'Allemagne ?", "Berlin"],
+                ["Quelle est la capitale de l'Espagne ?", "Madrid"]
+            ];
+
+            let score = 0;
+
+            for (let i = 0; i < Questions.length; i++) {
+                let answer = prompt(Questions[i][0]);
+
+                if (answer !== null && answer.toLowerCase() === Questions[i][1].toLowerCase()) {
+                    alert("Bonne réponse !");
+                    score++;
+                } else {
+                    alert("Réponse fausse !");
+                }
+            }
+
+            alert("Vous avez répondu correctement à " + score + " sur " + Questions.length + " questions.");
+        }
+    </script>
+
+</body>
+</html>

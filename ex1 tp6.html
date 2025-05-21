@@ -1,0 +1,24 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Exemple</title>
+</head>
+<body>
+    <div id="exemple">
+        <p id="paragraph">Ceci est un paragraphe</p>
+    </div>
+    <script>
+        let paragraph = document.getElementById("paragraph");
+        paragraph.textContent = "Le texte a été modifié";
+        paragraph.style.backgroundColor = "lightblue";
+        paragraph.style.textAlign = "center";
+
+        let exemple = document.getElementById("exemple");
+        exemple.addEventListener('click', function() {
+            paragraph.textContent = "Un clic a été détecté";
+        });
+    </script>
+</body>
+</html>
